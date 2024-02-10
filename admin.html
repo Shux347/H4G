@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        button[type="submit"] {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header" style="text-align:center">
+        <h1>Admin</h1>
+    </div>
+
+    <div class="container">
+        <h2>Search for a Potential Volunteers</h2>
+        <div class="border-up"></div>
+
+        <form action="receive.php" method="post">
+
+            <fieldset>
+                <legend class="contact">Availability</legend>
+
+                <div class="row">
+                    <label for="preferreddates"> Preferred Days </label>
+                    <p></p>
+                    <input type="checkbox" name="days[]" value="Monday"><label class="checkbox-label"> Monday</label><br><br/>
+                    <input type="checkbox" name="days[]" value="Tuesday"><label class="checkbox-label"> Tuesday </label><br><br/>
+                    <input type="checkbox" name="days[]" value="Wednesday"><label class="checkbox-label"> Wednesday</label><br></br>
+                    <input type="checkbox" name="days[]" value="Thursday"><label class="checkbox-label"> Thursday</label><br></br>
+                    <input type="checkbox" name="days[]" value="Friday"><label class="checkbox-label"> Friday </label><br></br>
+                    <input type="checkbox" name="days[]" value="Saturday"><label class="checkbox-label"> Saturday</label><br></br>
+                    <input type="checkbox" name="days[]" value="Sunday"><label class="checkbox-label"> Sunday </label><br></br>
+                </div>
+            </fieldset>
+            <div class="border_3"></div>
+
+            <fieldset>
+                <label for="skill">Select one skill to search:</label><br>
+                <select name="skill">
+                    <option value="comfortableWithPets">Comfortable with pets</option>
+                    <option value="cooking">Cooking</option>
+                    <option value="childcare">Child Care</option>
+                    <option value="elderlycare">Elderly Care</option>
+                    <option value="education">Education</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="itskills"> IT skills</option>
+                    <option value="knitting"> Knitting</option>
+                    <!-- Add more options for additional skills -->
+                </select><br>
+            </fieldset>
+
+            <p></p>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
